@@ -8,9 +8,9 @@ TCo2=Co2(:,1);CpCo2=Co2(:,2);hCo2=Co2(:,3);sCo2=Co2(:,4);PrCo2=Co2(:,6); %Co2 ta
 H2O=xlsread('H2O table.xlsx');
 TH2O=H2O(:,1);CpH2O=H2O(:,2);hH2O=H2O(:,3);sH2O=H2O(:,4);PrH2O=H2O(:,6); %H2O table
 T_1=288;P_1=101.35;P_5=101.35;n_c=0.90;n_GT=0.95;n_PT=0.89;m_dot=47;n_fc=0.89;alpha=11;fpr=1.25;n_N=1  %variable
-for T_3=1700%:200:2000
+for T_3=1400:200:2000
     i=0;
-    for PR=40%:1:60
+    for PR=10:1:60
           i=i+1;
           Pr_1=interp1(T,Pr,T_1,'spline');h_1=interp1(T,h,T_1,'spline');
           Pr_2d(i)=Pr_1*fpr;P_3(i)=PR*P_1;

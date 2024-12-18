@@ -17,9 +17,9 @@ Pr_2fa=interp1(h,Pr,h_2fa,'spline');
 Pr_5fs=Pr_2fa/PRF;
 h_5fs=interp1(Pr,h,Pr_5fs,'spline');
 V_5f=sqrt(2*(h_2fa-h_5fs)*1000);
-for T_3=1600%1400:200:2000
+for T_3=1400:200:2000
     i=0;
-    for PR=35.4%10:1:60
+    for PR=10:1:60
         i=i+1;
         P_2(i)=PR*P_1;P_3(i)=PR*P_1;
         Pr_1=interp1(T,Pr,T_1,'spline');h_1=interp1(T,h,T_1,'spline');
